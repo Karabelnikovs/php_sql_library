@@ -14,8 +14,8 @@
     
 
 <h2>Grāmatas:</h1>
-
-<table class="table table-bordered">
+<div class="table-responsive">
+<table class="table table-bordered" id="responsive-table">
     <thead>
         <tr>
             <th scope="col">Nosaukums</th>
@@ -28,7 +28,7 @@
     <tbody>
     <?php foreach ($books as $index => $book): ?>
         <?php $availability; 
-        if($book["status"] == '1'){ $availability = "pieejams"; }
+        if($book["status"] == '1'){ $availability = "Pieejams"; }
         else if($book["user_id"] == $_SESSION['user_id']){ $availability = "Rezervēts tev"; }
         else{ $availability = "Nepieejams"; }
         ?>
@@ -56,7 +56,7 @@
     <?php endforeach; ?>
 </tbody>
 </table>
-                
+</div>             
 </div>
 </body>
 </html>

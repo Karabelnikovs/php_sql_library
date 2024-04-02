@@ -32,7 +32,7 @@ if(isset($_GET["title"], $_GET["author"], $_GET["release_date"], $_GET["status"]
 
     
 }
-
+$editing = false;
 if (isset($_GET["edit"])) {
     $edit_id = $_GET["edit"];
     $edit_query = "SELECT * FROM books WHERE id=:id";
